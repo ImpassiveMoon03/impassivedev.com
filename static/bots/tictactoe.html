@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe | ImpassiveMoon</title>
+		<link rel="stylesheet" type="text/css" href="../scripts/style.css">
+		<link rel="icon" href="../assets/tictactoe.png">
+		<meta charset="UTF-8">
+		<meta name="author" content="Robert Offord">
+	</head>
+	<body>
+		<div id="maincontent">
+			<div id="header" onclick="window.open('/repos', '_self')" style="cursor:pointer;">Tic Tac Toe(Bot) | Click To Go Back</div>
+			<div class="botcontent">
+				<div class="botlink" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=762833969183326228&permissions=264256&scope=bot', '_blank')">
+					<img class="botlinkimage" src="../assets/discord-crop.png">
+					Add to Discord!
+					<img class="serverimage" src="../assets/tictactoe.png">
+				</div>
+				<div class="botlink" onclick="window.open('https://top.gg/bot/762833969183326228', '_blank')">
+					<img class="botlinkimage" src="../assets/topgg.svg">
+					Upvote on Top.gg!
+					<img class="serverimage" src="../assets/tictactoe.png">
+				</div>
+				<p><b>Language</b> - Node.js(JavaScript)</p>
+				<p><b>Github Repository</b> - <a href="https://www.github.com/ImpassiveMoon03/tic-tac-toe-bot" target="_blank" class="git">Click Here</a></p>
+				<p><b>About the Bot</b></p>
+				<p>Ever been bored in discord? Well why not fight the boredom with a game of Tic-Tac-Toe with one of your friends? Friends not good enough? Then challenge soem random server member to a game of pure wits!</p>
+				
+				<div class="botcommandcontent">
+					<h1 class="botcommandheader">Bot Commands, Select Command Below</h1>
+					<select id="botcommandselector" onchange="Change()">
+						<option>help</option>
+						<option>game</option>
+						<option>move</option>
+						<option>end</option>
+						<option>board</option>
+						<option>how</option>
+						<option>invite</option>
+						<option>stats</option>
+						<option>profile</option>
+						<option>changelog</option>
+					</select>
+					<div class="botcommanddiv" id="help" style="display:block">
+						<p class="head">View the bot's command list embed</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885024710583271464/Screenshot_2021-09-08_12.51.44_AM.png">
+					</div>
+					<div class="botcommanddiv" id="game">
+						<p class="head">Challenge another server member to a game</p>
+						<p class="ex">Options<br/>Member - The member you wish to challenge</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885025360268394516/Screenshot_2021-09-08_12.54.36_AM.png">
+					</div>
+					<div class="botcommanddiv" id="move">
+						<p class="head">Place an X or O respectively on the board square you wish to play on</p>
+						<p class="ex">Options<br/>Move - The board square you want to play on</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885028291680014346/Screenshot_2021-09-08_1.05.32_AM.png">
+					</div>
+					<div class="botcommanddiv" id="end">
+						<p class="head">End the current game you are playing</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885028712335163392/Screenshot_2021-09-08_1.07.55_AM.png">
+					</div>
+					<div class="botcommanddiv" id="board">
+						<p class="head">Show the board of the current game you are playing</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885029134936444959/Screenshot_2021-09-08_1.09.35_AM.png">
+					</div>
+					<div class="botcommanddiv" id="how">
+						<p class="head">Get a quick how-to on Tic Tac Toe</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885029686474838036/Screenshot_2021-09-08_1.11.47_AM.png">
+					</div>
+					<div class="botcommanddiv" id="invite">
+						<p class="head">Get the bot invite link and the support server invite link</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885030296767041556/Screenshot_2021-09-08_1.14.10_AM.png">
+					</div>
+					<div class="botcommanddiv" id="stats">
+						<p class="head">View some statistics on the bot</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885033957593321482/unknown.png?width=243&height=432">
+					</div>
+					<div class="botcommanddiv" id="profile">
+						<p class="head">View someone's wins/losses/draws</p>
+						<p class="ex">Options<br/>Member - The person who's stats you want to view</p>
+						<p class="ex">Example Output</p>
+						<img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885034543839596604/unknown.png">
+					</div>
+					<div class="botcommanddiv" id="changelog">
+            <p class="head">View the bot's changes</p>
+            <p class="ex">Options<br/>Version - The specific version to focus on</p>
+            <p class="ex">Example Output</p>
+            <img class="botcommandimg" src="https://media.discordapp.net/attachments/876316246608605214/885238917081726976/unknown.png">
+        	</div>
+				</div>
+
+				<hr />
+				<div class="changelogcontent">
+					<h1 class="botcommandheader">Changelog</h1>
+					<select id="changelogselector" onchange="ChangeLog()">
+						<option>3.1.1</option>
+						<option>3.1.2</option>
+					</select>
+
+					<div class="changelogdiv" id="3.1.1" style="display: block">
+						<p class="head">v3.1.1</p>
+						<p class="ex"> - Made "ready" event async</p>
+						<p class="ex"> - Added Top.gg stat posting</p>
+					</div>
+					<div class="changelogdiv" id="3.1.2">
+						<p class="head">v3.1.2</p>
+						<p class="ex"> - Made "guildCreate" and "guildDelete" async</p>
+						<p class="ex"> - Added changelog to README</p>
+					</div>
+					<div class="changelogdiv" id="3.2.0">
+						<p class="head">v3.2.0</p>
+						<p class="ex"> - Added "changelog" command</p>
+						<p class="ex"> - Added bot owner "refresh" command</p>
+						<p class="ex"> - Reworked command registration a tad bit</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../scripts/commands.js"></script>
+	</body>
+</html>
